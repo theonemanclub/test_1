@@ -1,0 +1,5 @@
+import tensorflow as tf
+from tensorflow import keras
+keras.datasets.california_housing.load_data(
+    version="large", path="california_housing.npz", test_split=0.2, seed=113
+)
