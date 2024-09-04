@@ -3,3 +3,12 @@ from tensorflow import keras
 keras.datasets.california_housing.load_data(
     version="large", path="california_housing.npz", test_split=0.2, seed=113
 )
+
+dataset = keras.datasets.california_housing
+
+# Assign the result of load_data to the tuple
+(train_x, train_y), (test_x, test_y) = dataset.load_data()
+ len(test_x)
+  test_x.shape
+ train_x.shape
+   len(test_y)
