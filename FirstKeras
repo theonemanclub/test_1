@@ -12,3 +12,13 @@ dataset = keras.datasets.california_housing
   test_x.shape
  train_x.shape
    len(test_y)
+
+#normalize
+imagens_treino = imagens_treino/float(255)
+modelo = keras.Sequential([keras.layers.Flatten(input_shape = (28,28)), 
+                          keras.layers.Dense(256, activation = tensorflow.nn.relu),
+                          keras.layers.Dense(10, activation = tensorflow.nn.softmax)])
+
+modelo.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy')
+
+modelo.fit(imagens_treino,identificacoes_treino)
